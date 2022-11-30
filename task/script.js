@@ -10,8 +10,11 @@ function example (str, search){
         }
 
         for(let k = 0; k < text.length; k++){
-            if(searchLower.includes(text[k])) {
-                len++;
+            for(let i = 0; i < searchLower.length; i++){
+                if(searchLower[i] == text[k]){
+                    len++;
+                    break;
+                }
             }
         }
 
